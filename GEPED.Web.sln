@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GEPED.Web", "GEPED.Web\GEPED.Web.csproj", "{11DCC11D-3470-44D5-AF77-672BF5CEDD52}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GEPED.Web.Tests", "GEPED.Web.Tests\GEPED.Web.Tests.csproj", "{7DF60C81-4459-4469-8E78-0BDE71ECDB48}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GEPED.Model", "GEPED.Model\GEPED.Model.csproj", "{03CEA0EF-E671-4328-9ADC-06E4F0BD3B4A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{11DCC11D-3470-44D5-AF77-672BF5CEDD52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11DCC11D-3470-44D5-AF77-672BF5CEDD52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11DCC11D-3470-44D5-AF77-672BF5CEDD52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11DCC11D-3470-44D5-AF77-672BF5CEDD52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DF60C81-4459-4469-8E78-0BDE71ECDB48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DF60C81-4459-4469-8E78-0BDE71ECDB48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DF60C81-4459-4469-8E78-0BDE71ECDB48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DF60C81-4459-4469-8E78-0BDE71ECDB48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03CEA0EF-E671-4328-9ADC-06E4F0BD3B4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03CEA0EF-E671-4328-9ADC-06E4F0BD3B4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03CEA0EF-E671-4328-9ADC-06E4F0BD3B4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03CEA0EF-E671-4328-9ADC-06E4F0BD3B4A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
