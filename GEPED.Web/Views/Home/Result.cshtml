@@ -1,0 +1,49 @@
+﻿@{
+    var status = "";
+    if (ViewBag.Entity == null)
+    {
+        status = GEPED.Model.OrderStatus.Invalido.ToString();
+    }
+    else
+    {
+        status = ViewBag.Entity.Status.ToString();
+    }
+}
+
+<div class="jumbotron">
+
+    @if (ViewBag.StatusCode == GEPED.Utils.StatusCode.OK)
+    {
+        <p class="lead">Operação realizada com sucesso.</p>
+    }
+    else
+    {
+        <p class="lead">Ocorreu um erro durante o processo.</p>
+    }
+    <h1>Dados do Pedido:</h1>
+    <p class="lead">Situação: @status</p>
+    @if (ViewBag.Entity != null)
+    {
+        <p class="lead">Data: @ViewBag.Entity.DtOrder</p>
+        <p class="lead">Nome do Cliente: @ViewBag.Entity.Customer.Name</p>
+        <p class="lead">Valor: @ViewBag.Entity.Payment.Amount</p>
+        <p class="lead">Parcelas: @ViewBag.Entity.Payment.Installments</p>
+        if (!string.IsNullOrWhiteSpace(@ViewBag.Entity.Payment.AuthorizationCode))
+        {
+            <p class="lead">Código de Autorização: @ViewBag.Entity.Payment.AuthorizationCode</p>
+        }
+    }
+
+    @if (ViewBag.Messages != null && ViewBag.Messages.Count > 0)
+    {
+        <p>Mensagens adicionais:</p>
+        foreach (var msg in ViewBag.Messages)
+        {
+            <p class="lead">msg</p>
+        }
+    }
+</div>
+
+<div>
+    @Html.ActionLink("Voltar", "Index")
+</div>

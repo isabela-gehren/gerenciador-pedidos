@@ -1,6 +1,6 @@
 ﻿namespace GEPED.Model
 {
-    public class MerchantOrder
+    public class Order
     {        
         public string MerchantOrderId { get; set; }
         public Customer Customer { get; set; }

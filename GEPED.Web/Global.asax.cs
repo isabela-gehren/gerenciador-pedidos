@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GEPED.Utils;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -17,6 +18,9 @@ namespace GEPED.Web
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             AutoMapperConfig.RegisterMappings();
+
+            var assemblies = AppDomain.CurrentDomain.GetAssemblies().Where(x => x.GetName().Name.StartsWith("GEPED"));
+            Resolver.Setup(assemblies.ToList(), "GEPED");
         }
     }
 }

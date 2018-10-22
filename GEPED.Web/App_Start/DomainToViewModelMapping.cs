@@ -13,16 +13,11 @@ namespace GEPED.Web
 
         protected override void Configure()
         {
-            var config = new MapperConfiguration(cfg =>
-            {
-                cfg.CreateMap<Customer, CustomerViewModel>();
-                cfg.CreateMap<Creditcard, CreditcardViewModel>();
-                cfg.CreateMap<Payment, PaymentViewModel>();
-                cfg.CreateMap<MerchantOrder, MerchantOrderViewModel>();
-            });
-
-            IMapper iMapper = config.CreateMapper();
+            Mapper.CreateMap<Customer, CustomerViewModel>();
+            Mapper.CreateMap<Creditcard, CreditcardViewModel>();
+            Mapper.CreateMap<Payment, PaymentViewModel>();
+            Mapper.CreateMap<OrderLocal, MerchantOrderViewModel>()
+                .ForMember(i => i.Status, o => o.MapFrom(op => op.Status.ToString()));
         }
-
     }
 }

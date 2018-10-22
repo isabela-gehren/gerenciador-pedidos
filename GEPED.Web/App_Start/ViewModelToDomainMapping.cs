@@ -10,17 +10,13 @@ namespace GEPED.Web
         {
             get { return "ViewModelToDomainMapping"; }
         }
+
         protected override void Configure()
         {
-
             Mapper.CreateMap<CustomerViewModel, Customer>();
             Mapper.CreateMap<CreditcardViewModel, Creditcard>();
             Mapper.CreateMap<PaymentViewModel, Payment>();
-            Mapper.CreateMap<MerchantOrderViewModel, MerchantOrder>();
-            
-            
-
+            Mapper.CreateMap<MerchantOrderViewModel, OrderLocal>();
         }
-
     }
 }
